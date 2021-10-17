@@ -1,6 +1,6 @@
 .slider {
    margin: 0 auto;
-   width: 60%;
+   width: 40%;
    text-align: center;
 }
 
@@ -36,6 +36,11 @@
    width: 25%;
    float:left;
    height: 100%;
+}
+
+.slide img {
+   height: 100%;
+   border-radius: 10px;
 }
 
 .bottom {

@@ -9,7 +9,7 @@
 }
 
 .slides {
-   padding: 10px;
+   padding: 30px;
    border: 3px solid #ccc;
    background: rgb(66, 65, 65);
    position: relative;
@@ -28,7 +28,7 @@
 }
 
 .slides__inner {
-   height: 300px;
+   height: 400px;
 }
 
 
@@ -87,6 +87,8 @@
    align-items: flex-start;
    height: 100%;
    color: white;
+   font-family: 'Roboto', sans-serif;
+   font-size: 20px;
 }
 
 
@@ -135,7 +137,7 @@
    }
 
    .slides__inner {
-      height: 200px;
+      height: 120px;
    }
    .bullets {
       width: 100px;

@@ -18,6 +18,7 @@
 .slides__overflow {
   width: 100%;
   overflow: hidden;
+  border-radius: 10px;
 }
 
 .slides__inner,
@@ -78,8 +79,7 @@
    width: 200px;
    float:left;
    display: flex;
-   justify-content: center;
-   align-items: center;
+   align-items: flex-start;
    height: 100%;
    color: white;
 }
@@ -87,13 +87,14 @@
 
 .bullets {   
   text-align: center;
+  width: 180px;
+  display: flex;
+  justify-content: space-between;
 }
 .bullets label {
-   display: inline-block;
    width: 25px;
    height: 25px;
    border-radius:100%;
-   margin: 0 10px;
    cursor:pointer;
 }
 
@@ -117,4 +118,21 @@
 #slide3:checked ~ .slides .bottom .bullets label:nth-child(3) .circle,
 #slide4:checked ~ .slides .bottom .bullets label:nth-child(4) .circle {
    background: #444;
+}
+
+@media screen and (max-width: 320px) {
+   .bottom {
+      flex-direction: column-reverse;
+   }
+
+   .slider {
+      width: 90%;
+   }
+
+   .slides__inner {
+      height: 200px;
+   }
+   .bullets {
+      width: 100px;
+   }
 }

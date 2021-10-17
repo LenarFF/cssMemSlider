@@ -1,0 +1,145 @@
+.slider {
+   margin: 0 auto;
+   width: 40%;
+   text-align: center;
+}
+
+.slider input[type=radio] {
+   display: none;
+}
+
+.slides {
+   padding: 30px;
+   border: 3px solid #ccc;
+   background: rgb(66, 65, 65);
+   position: relative;
+}
+
+.slides__overflow {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.slides__inner,
+.captions__inner {
+   transition: margin-left 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+   width: 400%;  
+}
+
+.slides__inner {
+   height: 400px;
+}
+
+
+.slide {
+   width: 25%;
+   float:left;
+   height: 100%;
+}
+
+.slide img {
+   height: 100%;
+   border-radius: 10px;
+}
+
+.bottom {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#slide1:checked ~ .slides .slides__inner,
+#slide1:checked ~ .slides .captions__inner
+ {
+   margin-left: 0;
+}
+#slide2:checked ~ .slides .slides__inner,
+#slide2:checked ~ .slides .captions__inner
+ {
+   margin-left: -100%;
+}
+#slide3:checked ~ .slides .slides__inner,
+#slide3:checked ~ .slides .captions__inner
+ {
+   margin-left: -200%;
+}
+#slide4:checked ~ .slides .slides__inner,
+#slide4:checked ~ .slides .captions__inner
+ {
+   margin-left: -300%;
+}
+
+.captions__overflow {
+  width: 200px;    
+  overflow: hidden;
+}
+
+.captions__inner {
+   height: 30px;
+}
+
+.caption {
+   width: 200px;
+   float:left;
+   display: flex;
+   align-items: flex-start;
+   height: 100%;
+   color: white;
+   font-family: 'Roboto', sans-serif;
+   font-size: 20px;
+}
+
+
+.bullets {   
+  text-align: center;
+  width: 180px;
+  display: flex;
+  justify-content: space-between;
+}
+.bullets label {
+   width: 25px;
+   height: 25px;
+   border-radius:100%;
+   cursor:pointer;
+}
+
+.circle {
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;  
+  background: rgb(6, 142, 206);
+  margin: 7px auto;
+  transition: all 0.5s;
+  border: 2px solid rgb(6, 142, 206)
+}
+
+.bullets label:hover .circle {
+  background: white;
+  border: 2px solid white
+}
+
+#slide1:checked ~ .slides .bottom .bullets label:nth-child(1) .circle,
+#slide2:checked ~ .slides .bottom .bullets label:nth-child(2) .circle,
+#slide3:checked ~ .slides .bottom .bullets label:nth-child(3) .circle,
+#slide4:checked ~ .slides .bottom .bullets label:nth-child(4) .circle {
+   background: #444;
+}
+
+@media screen and (max-width: 320px) {
+   .bottom {
+      flex-direction: column-reverse;
+   }
+
+   .slider {
+      width: 90%;
+   }
+
+   .slides__inner {
+      height: 120px;
+   }
+   .bullets {
+      width: 100px;
+   }
+}
